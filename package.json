@@ -8,6 +8,7 @@
     "@mui/icons-material": "^6.1.8",
     "@mui/material": "^6.1.9",
     "@mui/x-charts": "^7.22.3",
+    "@reduxjs/toolkit": "^2.5.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -19,6 +20,7 @@
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "recharts": "^2.13.3",
@@ -50,6 +52,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@types/react": "^18.3.12",
     "eslint": "^8.57.1"
   }

@@ -1,22 +1,8 @@
 import { Box, Link, Typography } from '@mui/material';
 import React from 'react';
+import {footeritems} from './FooterData';
 
-const footeritems = [
-  {
-    footeritem: 'Home',
-    href: '/',
-  },
-  {
-    footeritem: 'About Us',
-    href: '/',
-  },
-  {
-    footeritem: 'Our Team',
-    href: '/',
-  },
-];
-
-export default function Footer() {
+const Footer : React.FC = () => {
   return (
     <Box
       component="footer"
@@ -65,3 +51,4 @@ export default function Footer() {
     </Box>
   );
 }
+export default Footer;

@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux'; // اضافه کردن Provider
 import App from './App';
+import store from '../src/store/store'; // فایل مربوط به store
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}> {/* افزودن Provider و اتصال به store */}
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

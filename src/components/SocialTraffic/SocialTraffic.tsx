@@ -13,39 +13,9 @@ import {
   TableRow,
   IconButton,
   Grid,
-} from '@mui/material';
+} from '@mui/material'; 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
-type DataRow = {
-  socialNetwork: string;
-  users: number;
-  newUsers: number;
-  sessions: number;
-  bounceRate: string;
-  pagesPerSession: number;
-  avgSessionDuration: string;
-};
-
-const weekData: DataRow[] = [
-  { socialNetwork: 'Facebook', users: 3397, newUsers: 422, sessions: 2584, bounceRate: '30.35%', pagesPerSession: 2.5, avgSessionDuration: '00:01:05' },
-  { socialNetwork: 'Twitter', users: 2397, newUsers: 422, sessions: 2584, bounceRate: '30.35%', pagesPerSession: 2.5, avgSessionDuration: '00:01:05' },
-  { socialNetwork: 'LinkedIn', users: 1397, newUsers: 422, sessions: 2584, bounceRate: '30.35%', pagesPerSession: 2.5, avgSessionDuration: '00:01:05' },
-  { socialNetwork: 'YouTube', users: 4397, newUsers: 422, sessions: 2584, bounceRate: '30.35%', pagesPerSession: 2.5, avgSessionDuration: '00:01:05' },
-  { socialNetwork: 'Pinterest', users: 597, newUsers: 422, sessions: 2584, bounceRate: '30.35%', pagesPerSession: 2.5, avgSessionDuration: '00:01:05' },
-];
-
-const monthData = [...weekData.map(row => ({ ...row, users: row.users + 1000 }))];
-const yearData = [...weekData.map(row => ({ ...row, users: row.users + 2000 }))];
-
-const columns: { id: keyof DataRow; label: string; align?: 'right' }[] = [
-  { id: 'socialNetwork', label: 'Social Network' },
-  { id: 'users', label: 'Users', align: 'right' },
-  { id: 'newUsers', label: 'New Users', align: 'right' },
-  { id: 'sessions', label: 'Sessions', align: 'right' },
-  { id: 'bounceRate', label: 'Bounce Rate', align: 'right' },
-  { id: 'pagesPerSession', label: 'Pages / Session', align: 'right' },
-  { id: 'avgSessionDuration', label: 'Avg. Session Duration', align: 'right' },
-];
+import { weekData, monthData, yearData, columns } from './SocialTrafficData'; // فقط columns و داده‌ها را وارد کنید
 
 const SocialTraffic: React.FC = () => {
   const [timeframe, setTimeframe] = useState<'week' | 'month' | 'year'>('week');
@@ -59,7 +29,7 @@ const SocialTraffic: React.FC = () => {
     setMenuAnchor(null);
   };
 
-  const getData = (): DataRow[] => {
+  const getData = () => {
     switch (timeframe) {
       case 'week':
         return weekData;
@@ -98,11 +68,7 @@ const SocialTraffic: React.FC = () => {
           Social Traffic Metrics
         </Typography>
 
-        <Box 
-        sx={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            }}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Button
             onClick={() => setTimeframe('week')}
             sx={{
@@ -170,35 +136,17 @@ const SocialTraffic: React.FC = () => {
           </Menu>
         </Box>
       </Box>
-        <Box 
-        sx={{
-            backgroundColor:"#f8f9fb",
-        }}>
-            <Box 
-            sx={{
-                display:"flex",
-                justifyContent:"space-around",
-                padding:"15px 0",
-            }}>
-                <Typography >
-                Acquisition
-                </Typography>
-                <Typography>
-                Behavior
-                </Typography>
-            </Box>
-        </Box>
 
       {/* Table Section */}
-      <TableContainer >
-        <Table 
-        sx={{ 
-            minWidth: 650 ,
-            boxShadow:"none",
+      <TableContainer>
+        <Table
+          sx={{
+            minWidth: 650,
+            boxShadow: 'none',
             padding: '20px',
-        }} 
-            aria-label="social traffic table"
-            >
+          }}
+          aria-label="social traffic table"
+        >
           <TableHead>
             <TableRow>
               {columns.map((column) => (
@@ -208,16 +156,12 @@ const SocialTraffic: React.FC = () => {
               ))}
             </TableRow>
           </TableHead>
-          <TableBody
-          sx={{
-            boxShadow:"none",
-            
-          }}>
+          <TableBody>
             {getData().map((row) => (
               <TableRow key={row.socialNetwork}>
                 {columns.map((column) => (
                   <TableCell key={column.id} align={column.align || 'left'}>
-                    {row[column.id]}
+                    {row[column.id as keyof typeof row]}
                   </TableCell>
                 ))}
               </TableRow>

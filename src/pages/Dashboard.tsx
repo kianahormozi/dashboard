@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
@@ -7,7 +7,7 @@ import CalendarButton from '../components/Button/Calendarbutton';
 import ExportButton from '../components/Button/Exportbutton';
 import ShareButton from '../components/Button/Sharebutton';
 import AddButton from '../components/Button/Addbutton';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 
 function Dashboard() {

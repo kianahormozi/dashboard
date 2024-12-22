@@ -5,36 +5,19 @@ import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
-import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
-import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
-import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import Flag from './AppTools/Flag';
-import Profile from './AppTools/Profile';
-import Mail from './AppTools/Mail';
-import Notifications from './AppTools/Notifications';
-import Logo from './AppTools/Logo';
-import Search from './AppTools/Search';
-import Setting from './AppTools/Setting';
-import Help from './AppTools/Help';
-
-const settings = [
-  {usertitle :'Profile', usericon:<Person2OutlinedIcon /> },
-  { usertitle :'Setting', usericon: <SettingsOutlinedIcon />},
-  {usertitle : 'Billing', usericon: < AttachMoneyOutlinedIcon />},
-  { usertitle :'Activity', usericon: < PeopleAltOutlinedIcon />},
-  { usertitle :'Help', usericon:<NotificationsOutlinedIcon />}
-];
-
+import Flag from '../AppTools/Flag';
+import Profile from '../AppTools/Profile';
+import Mail from '../AppTools/Mail';
+import Notifications from '../AppTools/Notifications';
+import Logo from '../AppTools/Logo';
+import Search from '../AppTools/Search';
+import Setting from '../AppTools/Setting';
+import Help from '../AppTools/Help';
 
 interface HeaderProps {
   open: boolean;
   onDrawerToggle: () => void;
-  darkMode: boolean;
-  onDarkModeToggle: () => void;
 }
-
 const AppBarStyled = styled(AppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
   backgroundColor: '#ffff',
@@ -49,8 +32,6 @@ const AppBarStyled = styled(AppBar)(({ theme }) => ({
 const Header: React.FC<HeaderProps> = ({
   open,
   onDrawerToggle,
-  darkMode,
-  onDarkModeToggle,
 }) => {
  
   return (

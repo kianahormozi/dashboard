@@ -1,10 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import FacebookOverview from '../components/FacebookOverview';
-import YouTubeSubscribers from '../components/YoutubeSubscribers';
-import SocialTraffic from '../components/SocialTraffic';
+import FacebookOverview from '../components/FacebookOverview/FacebookOverview';
+import YouTubeSubscribers from '../components/YouTubeSubscribers/YoutubeSubscribers';
+import SocialTraffic from '../components/SocialTraffic/SocialTraffic';
 import { useOutletContext } from 'react-router-dom';
-import SocialMediaOverviews from '../components/SocialMediaOverviews';
+import SocialMediaOverviews from '../components/SocialMediaOverviews/SocialMediaOverviews';
 
 
 interface DashboardContext {

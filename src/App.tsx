@@ -1,12 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route , Outlet } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import { CssBaseline, GlobalStyles } from "@mui/material";
 import SocialMedia from './pages/SocialMedia';
 import LoginPage from './pages/LoginPage';
 import Finance from './pages/Finance';
+import Product from './pages/Product';
+import Cart from './pages/Cart'; 
+import { useSelector } from 'react-redux';
+import { RootState } from './store/store';
+
 
 export default function App() {
+  const currentPage = useSelector((state: RootState) => state.navigation.currentPage);
   return (
     <Router>
       <>
@@ -35,7 +41,7 @@ export default function App() {
               },
             },
             "#login-form input": {
-              marginBottom: "10px", 
+              marginBottom: "10px",  
             },
           }}
         />
@@ -46,6 +52,10 @@ export default function App() {
           <Route path="/dashboard/*" element={<Dashboard />}>
             <Route path="socialmedia" element={<SocialMedia />} />
             <Route path="finance" element={<Finance />} />
+          </Route>
+          <Route path="ecommerce/*" element={<Dashboard />}>
+            <Route path="product" element={<Product />} />
+            <Route path="cart" element={<Cart />} />
           </Route>
         </Routes>
       </>

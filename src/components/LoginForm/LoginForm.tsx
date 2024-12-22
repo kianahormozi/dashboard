@@ -16,17 +16,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useNavigate } from 'react-router-dom';
+import {providers } from './LoginFormData';
 
-
-const providers = [
-  { src: '/image/google.png', name: 'Google' },
-  { src: '/image/facebook.jpg', name: '' },
-  { src: '/image/twitter.webp', name: '' },
-  { src:"/image/github.jpg", name: 'GitHub' },
-  { src: '/image/linkedin.webp', name: 'LinkedIn' }, 
-  { src: '', name: 'Auth0' }, 
-  { src: '', name: 'Firebase' }, 
-];
 
 // کامپوننت فیلد ایمیل
 function CustomEmailField({
