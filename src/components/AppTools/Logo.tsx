@@ -15,7 +15,10 @@ export default function Logo() {
             <img
                 src="/image/logo-dashboard.svg"
                 alt="Logo"
-                style={{ height: '30px', width: 'auto' }}
+                style={{ 
+                  height: '24px', 
+                  width: 'auto',
+                 }}
             />
         </Box>
     </>

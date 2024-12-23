@@ -22,19 +22,20 @@ export default function Search() {
       }));
 
       const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
+        padding:'0 16px',
         height: '100%',
         position: 'absolute',
         pointerEvents: 'none',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        color:"rgb(90, 95, 125)",
       }));
             
       const StyledInputBase = styled(InputBase)(({ theme }) => ({
         color: 'inherit',
         '& .MuiInputBase-input': {
-          padding: theme.spacing(1, 1, 1, 0),
+          padding:'8px 8px 8px 0',
           paddingLeft: `calc(1em + ${theme.spacing(4)})`,
           transition: theme.transitions.create('width'),
           width: '100%',

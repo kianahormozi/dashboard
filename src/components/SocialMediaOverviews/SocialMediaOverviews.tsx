@@ -28,7 +28,9 @@ const SocialMediaOverviews: React.FC = () => {
         Social Media Overview
       </Typography>
 
-      <Divider sx={{ marginBottom: "15px" }} />
+      <Divider 
+      sx={{ 
+        margin: "0 20px 15px",  }} />
 
       {/* Social Media Items */}
       <Box

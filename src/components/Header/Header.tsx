@@ -21,7 +21,7 @@ interface HeaderProps {
 const AppBarStyled = styled(AppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
   backgroundColor: '#ffff',
-  color: theme.palette.text.primary,
+  color:'#272b41',
   boxShadow: '0 4px 6px rgba(170, 163, 163, 0.1)',
   transition: theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
@@ -52,12 +52,12 @@ const Header: React.FC<HeaderProps> = ({
       >
         {/* Menu Icon */}
         <IconButton
-          color="inherit"
           aria-label="open drawer"
           onClick={onDrawerToggle}
           edge="start"
           sx={{
             transform: open ? "rotate(0deg)" : "rotate(180deg)",
+            color:"rgb(173, 180, 210)",
             transition: "transform 0.3s ease-in-out",
             paddingLeft: "1rem",
             "&:hover":{
