@@ -55,9 +55,19 @@ const Overviews: React.FC = () => {
     };
 
     return (
-      <Box sx={{ marginBottom: "10px" }}>
-        <Box sx={{ height: "100px", marginTop: "10px" }}>
-          <Line data={chartData} options={chartOptions} />
+      <Box 
+      sx={{ 
+        marginBottom: "10px",
+         }}>
+        <Box 
+        sx={{ 
+          height: "100px", 
+          marginTop: "10px",
+           }}>
+          <Line 
+          data={chartData} 
+          options={chartOptions}
+           />
         </Box>
       </Box>
     );

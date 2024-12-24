@@ -14,7 +14,11 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
 }) => {
   return (
     <Box>
-      <Typography variant="h6" sx={{ marginBottom: 2 }}>
+      <Typography
+       variant="h6" 
+       sx={{ 
+        marginBottom: 2 
+        }}>
         Categories
       </Typography>
       <List>

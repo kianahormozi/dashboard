@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { Product } from '../components/ProductStore/ProductStoreData'; // تغییر آدرس‌دهی به ProductStoreData و وارد کردن داده‌ها
 
 export interface CartItem {
@@ -12,7 +12,7 @@ export interface CartItem {
   id: number;  // فرض بر این است که هر محصول یک id منحصر به فرد دارد
 }
 
-interface CartState {
+interface CartState { 
   items: CartItem[];
 }
 
@@ -53,5 +53,4 @@ const cartSlice = createSlice({
 });
 
 export const { addToCart, removeFromCart, updateQuantity } = cartSlice.actions;
-
 export default cartSlice.reducer;

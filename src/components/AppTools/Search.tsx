@@ -7,16 +7,12 @@ import InputBase from '@mui/material/InputBase';
 export default function Search() {
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
-        '&:hover': {
-          backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
-        marginRight: theme.spacing(2),
+        borderRadius: '4px',
+        marginRight: '16px',
         marginLeft: 0,
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-          marginLeft: theme.spacing(3),
+          marginLeft: '24px',
           width: 'auto',
         },
       }));

@@ -38,7 +38,10 @@ export default function Profile(): JSX.Element {
 
   return (
     <>
-      <Box sx={{ flexGrow: 0 }}>
+      <Box 
+      sx={{ 
+        flexGrow: 0,
+         }}>
             <Tooltip title="Open settings">
               <IconButton 
               onClick={handleOpenUserMenu} 
@@ -90,7 +93,8 @@ export default function Profile(): JSX.Element {
                   padding: "20px 25px",
                   backgroundColor:"rgb(244, 245, 247)",
                   borderRadius:"8px",
-                  marginBottom:"12px"
+                  marginBottom:"12px",
+
                 }}
               >
                 <Avatar
@@ -98,7 +102,7 @@ export default function Profile(): JSX.Element {
                   src="/image/profile.png"
                   sx={ { 
                     width: 50, 
-                    height: 50 
+                    height: 50 ,
                   } }
                 />
                 <Box 
@@ -108,12 +112,14 @@ export default function Profile(): JSX.Element {
                   <Typography 
                   variant="subtitle1" 
                   sx={{ 
-                    fontWeight: "bold" 
+                    fontWeight: "bold",
                     }
                     }>
                     John Doe
                   </Typography>
-                  <Typography variant="caption" color="text.secondary">
+                  <Typography 
+                  variant="caption" 
+                  color="text.secondary">
                     johndoe@example.com
                   </Typography>
                 </Box>
@@ -135,7 +141,7 @@ export default function Profile(): JSX.Element {
                     "&:hover": {
                       color:"rgb(95, 99, 242)",
                       paddingLeft:"25px",
-                      backgroundColor:"transparent"
+                      backgroundColor:"transparent",
                     },
                   }}
                 >

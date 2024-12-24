@@ -5,7 +5,7 @@ interface NavigationState {
 }
 
 const initialState: NavigationState = {
-  currentPage: '/dashboard/socialmedia', // صفحه پیش‌فرض
+  currentPage: '/dashboard/socialmedia', // صفحه پیش‌فرض 
 };
 
 const navigationSlice = createSlice({

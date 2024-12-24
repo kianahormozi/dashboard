@@ -38,10 +38,20 @@ export default function Help(): JSX.Element {
 
   return (
     <>
-      <Box sx={{ flexGrow: 0 }}>
+      <Box 
+      sx={{ 
+        flexGrow: 0,
+         }}>
         <Tooltip title="Help Menu">
-          <IconButton onClick={handleOpenHelpMenu} sx={{ p: 0 }}>
-            <HelpOutlineOutlinedIcon sx={{ color: "#6b708b" }} />
+          <IconButton 
+          onClick={handleOpenHelpMenu} 
+          sx={{ 
+            p: 0,
+             }}>
+            <HelpOutlineOutlinedIcon 
+            sx={{ 
+              color: "#6b708b",
+               }} />
           </IconButton>
         </Tooltip>
 

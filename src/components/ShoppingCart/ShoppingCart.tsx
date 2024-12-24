@@ -37,8 +37,7 @@ const StyledTableRow = styled(TableRow)({
 const ShoppingCart: React.FC = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
-  const [subtotal] = useState(0);
-
+  const [subtotal] = useState(0); // قیمت کل محصولات
   const [shippingCharge] = useState(50);
   const [discount, setDiscount] = useState(0);
 
@@ -139,6 +138,9 @@ const ShoppingCart: React.FC = () => {
         <Button
         sx={{
           color:"#000",
+          '&:hover':{
+            backgroundColor:"transparent",
+          }
         }}>
           {item.Quantity}
         </Button>

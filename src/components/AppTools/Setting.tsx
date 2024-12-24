@@ -33,9 +33,15 @@ export default function Setting(): JSX.Element {
         size="large"
         color="inherit"
         onClick={handleOpenSettingMenu}
-        sx={{ padding: "0", backgroundColor: "transparent !important" }}
+        sx={{ 
+          padding: "0", 
+          backgroundColor: "transparent !important",
+         }}
       >
-        <SettingsOutlinedIcon sx={{ color: "#6b708b" }} />
+        <SettingsOutlinedIcon 
+        sx={{ 
+          color: "#6b708b",
+           }} />
       </IconButton>
       <Menu
         id="menu-appbar"
@@ -59,7 +65,7 @@ export default function Setting(): JSX.Element {
             padding: "20px",
             borderRadius: "10px",
             boxShadow: "0px 4px 16px rgba(0, 0, 0, 0.2)",
-            marginTop:"1rem"
+            marginTop:"1rem",
           },
         }}
       >
@@ -80,7 +86,7 @@ export default function Setting(): JSX.Element {
                 gap: "15px",
                 cursor: "pointer",
                 "&:hover": {
-                    boxShadow:"rgba(146, 153, 184, 0.082) 0px 5px 20px"
+                    boxShadow:"rgba(146, 153, 184, 0.082) 0px 5px 20px",
                 },
               }}
             >

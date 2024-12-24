@@ -7,21 +7,28 @@ export default function AddButton() {
   return (
     <Stack direction="row" spacing={2}>
       <Button variant="outlined" 
-      startIcon={<AddIcon sx={{color:"#ffff" , marginRight:"1px" , width:"15px" , height:"15px"}} />} 
+      startIcon={<AddIcon 
+        sx={{
+          color:"#ffff" , 
+          marginRight:"1px" , 
+          width:"15px" , 
+          height:"15px",
+        }}
+         />} 
       disableRipple
       sx={{
-          backgroundColor: 'rgb(95, 99, 242)', // رنگ اصلی دکمه
+          backgroundColor: 'rgb(95, 99, 242)', 
           color: '#ffff ',
           borderRadius: '8px',
           borderColor:"transparent",
-          textTransform: 'none', // جلوگیری از حروف بزرگ
+          textTransform: 'none',
           fontSize: '14px',
-          padding: '6px 12px', // فاصله داخلی
-          height: '40px', // ارتفاع مشخص
-          lineHeight: '1.5', // ارتفاع خط مناسب
-          display: 'flex', // برای تنظیم آیکون و متن
-          alignItems: 'center', // هم‌تراز کردن محتوا
-          justifyContent: 'center', // وسط‌چین کردن
+          padding: '6px 12px', 
+          height: '40px', 
+          lineHeight: '1.5',
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
           '&:hover': {
             backgroundColor:'rgb(67, 71, 217)'
           },

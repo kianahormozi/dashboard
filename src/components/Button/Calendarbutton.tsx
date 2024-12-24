@@ -18,18 +18,18 @@ export default function ClendarButton() {
       } 
       disableRipple
       sx={{
-          backgroundColor: '#FFFF', // رنگ اصلی دکمه
+          backgroundColor: '#FFFF', 
           color: '#5a5f7d ',
           borderRadius: '8px',
           borderColor:"transparent",
-          textTransform: 'none', // جلوگیری از حروف بزرگ
+          textTransform: 'none', 
           fontSize: '14px',
-          padding: '6px 12px', // فاصله داخلی
-          height: '40px', // ارتفاع مشخص
-          lineHeight: '1.5', // ارتفاع خط مناسب
-          display: 'flex', // برای تنظیم آیکون و متن
-          alignItems: 'center', // هم‌تراز کردن محتوا
-          justifyContent: 'center', // وسط‌چین کردن
+          padding: '6px 12px', 
+          height: '40px', 
+          lineHeight: '1.5', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
           '&:hover': {
             color:"#5f63f2",
           },

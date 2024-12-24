@@ -198,8 +198,8 @@ const ProductStore: React.FC<Productstoreprops> = ({ children }) => {
               page={currentPage}
               shape="rounded"
               onChange={(e, page) => setCurrentPage(page)}
-              showFirstButton
-              showLastButton
+              showFirstButton // نمایش اولین صفحه
+              showLastButton // نمایش اخرین صفحه
             />
           </Stack>
         </Grid>

@@ -12,12 +12,10 @@ import {
   Typography,
   Avatar,
 } from '@mui/material';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useNavigate } from 'react-router-dom';
 import {providers } from './LoginFormData';
-
 
 // کامپوننت فیلد ایمیل
 function CustomEmailField({
@@ -44,7 +42,7 @@ function CustomEmailField({
       InputProps={{
         style: { 
           fontSize: '13px',
-          padding:"5px 0" ,} // تنظیم سایز فونت
+          padding:"5px 0",} // تنظیم سایز فونت
       }}
     />
   );

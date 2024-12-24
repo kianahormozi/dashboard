@@ -38,16 +38,16 @@ interface MenuItemData {
 const StyledMenu = styled(Menu)(({ theme }) => ({
   '& .MuiPaper-root': {
     borderRadius: 6,
-    marginLeft: '5rem',
-    marginTop: '5px',
-    minWidth: 180,
+    marginLeft: '-1rem',
+    marginTop: '0',
+    minWidth: 130,
     color: 'rgb(55, 65, 81)',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenuItem-root': {
       '& .MuiSvgIcon-root': {
         fontSize: 18,
-        color: theme.palette.text.secondary,
+        color: 'rgb(55, 65, 81)',
         marginRight: theme.spacing(1.5),
       },
     },
@@ -73,7 +73,6 @@ const CashFlow: React.FC = () => {
   const handleMenuClose = () => setAnchorEl(null);
 
   // استفاده از useMemo برای جلوگیری از محاسبه مجدد dataset
-
   const getCurrentDataset = useMemo(() => {
     switch (timeRange) {
       case "Week":
@@ -143,7 +142,10 @@ const CashFlow: React.FC = () => {
             Nov 23, 2019 - Nov 29, 2019
           </Typography>
         </Box>
-        <Box sx={{ display: "flex" }}>
+        <Box 
+        sx={{ 
+          display: "flex",
+           }}>
           <Tabs
             value={timeRange}
             onChange={(event, newValue) => setTimeRange(newValue)}
@@ -159,7 +161,7 @@ const CashFlow: React.FC = () => {
               value="Week"
               disableRipple
               sx={{
-                fontSize: "12px", // اندازه فونت
+                fontSize: "12px", 
                 textTransform: "capitalize",
                 minWidth: "auto", // کاهش فضای اضافی
                 padding: "0 8px", // تنظیم فضای داخلی تب
@@ -188,7 +190,9 @@ const CashFlow: React.FC = () => {
               }}
             />
           </Tabs>
-          <IconButton onClick={handleMenuOpen}>
+          <IconButton
+          disableRipple 
+          onClick={handleMenuOpen}>
             <MoreVertIcon />
           </IconButton>
 
@@ -213,8 +217,12 @@ const CashFlow: React.FC = () => {
                   lineHeight: "1.5715",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  {/* Render the icon component properly */}
+                <Box 
+                sx={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "8px",
+                   }}>
                   {React.isValidElement(item.icon) ? item.icon : null}
                   <span>{item.text}</span>
                 </Box>
@@ -225,7 +233,11 @@ const CashFlow: React.FC = () => {
         </Box>
       </Box>
 
-      <Divider sx={{ marginBottom: "30px", marginTop: "-13px" }} />
+      <Divider 
+      sx={{ 
+        marginBottom: "30px", 
+        marginTop: "-13px",
+         }} />
 
       <Box
         sx={{
@@ -236,26 +248,56 @@ const CashFlow: React.FC = () => {
         }}
       >
         <Box>
-          <Typography sx={{ fontSize: "14px", color: "#757575", marginBottom: "5px" }}>
+          <Typography 
+          sx={{ 
+            fontSize: "14px", 
+            color: "#757575", 
+            marginBottom: "5px",
+             }}>
             Current Balance
           </Typography>
-          <Typography sx={{ fontSize: "24px", fontWeight: "bold", color: "#5f63f2" }}>
+          <Typography 
+          sx={{ 
+            fontSize: "24px", 
+            fontWeight: "bold", 
+            color: "#5f63f2",
+             }}>
           ${headerStats.Balance.toLocaleString()}
           </Typography>
         </Box>
         <Box>
-          <Typography sx={{ fontSize: "14px", color: "#757575", marginBottom: "5px" }}>
+          <Typography 
+          sx={{ 
+            fontSize: "14px", 
+            color: "#757575", 
+            marginBottom: "5px",
+             }}>
             Cash In
           </Typography>
-          <Typography sx={{ fontSize: "24px", fontWeight: "bold", color: "#272b41" }}>
+          <Typography 
+          sx={{ 
+            fontSize: "24px", 
+            fontWeight: "bold", 
+            color: "#272b41",
+             }}>
             ${headerStats.CashInItem.toLocaleString()}
           </Typography>
         </Box>
         <Box>
-          <Typography sx={{ fontSize: "14px", color: "#757575", marginBottom: "5px" }}>
+          <Typography 
+          sx={{ 
+            fontSize: "14px", 
+            color: "#757575", 
+            marginBottom: "5px",
+             }}>
             Cash Out
           </Typography>
-          <Typography sx={{ fontSize: "24px", fontWeight: "bold", color: "#272b41" }}>
+          <Typography 
+          sx={{ 
+            fontSize: "24px", 
+            fontWeight: "bold", 
+            color: "#272b41",
+             }}>
             ${headerStats.CashOutItem.toLocaleString()}
           </Typography>
         </Box>
@@ -270,17 +312,33 @@ const CashFlow: React.FC = () => {
         <ResponsiveContainer width="100%" height="100%">
         <BarChart data={getCurrentDataset}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey={timeRange === "Week" ? "day" : timeRange === "Month" ? "range" : "month"} />
+            <XAxis 
+            dataKey={timeRange === "Week" ? "day" : timeRange === "Month" ? "range" : "month"} />
             <YAxis />
-            <Tooltip cursor={{ fill: "transparent" }} contentStyle={{ backgroundColor: "white", border: "1px solid #ccc" }} />
-            <Bar dataKey="CashIn" barSize={15} onMouseEnter={(_, index) => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
+            <Tooltip 
+            cursor={{ fill: "transparent", }} 
+            contentStyle={{ 
+              backgroundColor: "white", 
+              border: "1px solid #ccc",
+               }} />
+            <Bar 
+            dataKey="CashIn" 
+            barSize={15} 
+            onMouseEnter={(_, index) => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
               {getCurrentDataset.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={hoveredIndex === index ? "#20c997" : "lightgreen"} />
+                <Cell 
+                key={`cell-${index}`} 
+                fill={hoveredIndex === index ? "#20c997" : "lightgreen"} />
               ))}
             </Bar>
-            <Bar dataKey="CashOut" barSize={15} onMouseEnter={(_, index) => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
+            <Bar 
+            dataKey="CashOut" 
+            barSize={15} 
+            onMouseEnter={(_, index) => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
               {getCurrentDataset.map((entry, index) => (
-                <Cell key={`cell-out-${index}`} fill={hoveredIndex === index ? "#f44336" : "#ff8a65"} />
+                <Cell 
+                key={`cell-out-${index}`} 
+                fill={hoveredIndex === index ? "#f44336" : "#ff8a65"} />
               ))}
             </Bar>
           </BarChart>
@@ -288,8 +346,18 @@ const CashFlow: React.FC = () => {
       </Box>
       
       {/* راهنمای رنگ های نمودار*/}
-      <Box sx={{ display: "flex", alignItems: "center", gap: "15px" }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+      <Box 
+      sx={{ 
+        display: "flex", 
+        alignItems: "center", 
+        gap: "15px",
+         }}>
+          <Box 
+          sx={{ 
+            display: "flex", 
+            alignItems: "center", 
+            gap: "5px",
+             }}>
             <Box
               sx={{
                 width: "15px",
@@ -298,11 +366,20 @@ const CashFlow: React.FC = () => {
                 borderRadius: "3px",
               }}
             />
-            <Typography sx={{ fontSize: "12px", color: "#757575" }}>
+            <Typography 
+            sx={{ 
+              fontSize: "12px", 
+              color: "#757575",
+               }}>
               Cash In
             </Typography>
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+          <Box 
+          sx={{ 
+            display: "flex", 
+            alignItems: "center", 
+            gap: "5px",
+             }}>
             <Box
               sx={{
                 width: "15px",
@@ -311,7 +388,11 @@ const CashFlow: React.FC = () => {
                 borderRadius: "3px",
               }}
             />
-            <Typography sx={{ fontSize: "12px", color: "#757575" }}>
+            <Typography 
+            sx={{ 
+              fontSize: "12px", 
+              color: "#757575",
+               }}>
               Cash Out
             </Typography>
           </Box>

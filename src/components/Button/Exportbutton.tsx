@@ -133,7 +133,7 @@ function ExportButton() {
           sx={{
             color:'#5a5f7d' , 
             fontSize:'13px' , 
-            lineHeight:'1.5715'
+            lineHeight:'1.5715',
             } }>
             {item.icon}
             {item.text}

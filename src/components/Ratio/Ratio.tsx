@@ -44,19 +44,25 @@ const Ratio: React.FC = () => {
               width: "100%",
             }}
           >
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            <Typography variant="h6" 
+            sx={{ 
+              fontWeight: "600", }}>
               {item.boxTitle} Ratio
             </Typography>
 
             {/* مقدار بزرگ Ratio */}
-            <Typography variant="h4" sx={{ fontWeight: "bold", marginTop: 1 }}>
+            <Typography variant="h4" 
+            sx={{ 
+              fontWeight: "600", 
+              marginTop: 1,
+              }}>
               {item.ratioValue}
             </Typography>
             <Box
             sx={{
                 display:"flex",
                 gap:1,
-                alignItems:"baseline"
+                alignItems:"baseline",
 
             }}>
                 {/* نوار پیشرفت و درصد*/}

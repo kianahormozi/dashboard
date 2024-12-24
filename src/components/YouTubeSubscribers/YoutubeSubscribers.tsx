@@ -60,7 +60,7 @@ const YouTubeSubscribers : React.FC =() => {
           sx={{ 
             fontWeight: "600", 
             fontSize: "16px", 
-            color: "#272b41" ,
+            color: "#272b41",
           }}
         >
           Social Media Overview
@@ -174,13 +174,25 @@ const YouTubeSubscribers : React.FC =() => {
       </Box>
 
       {/* چارت */}
-      <Box sx={{ width: "100%", height: "680px" , paddingTop:"50px" }}> 
+      <Box 
+      sx={{ 
+        width: "100%", 
+        height: "680px" , 
+        paddingTop:"50px",
+         }}> 
       <ResponsiveContainer width="100%" height="100%">
           <BarChart data={getCurrentDataset}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey={timeRange === "Week" ? "day" : timeRange === "Month" ? "range" : "month"} />
+            <XAxis 
+            dataKey={timeRange === "Week" ? "day" : timeRange === "Month" ? "range" : "month"} />
             <YAxis />
-            <Tooltip cursor={{ fill: "transparent" }} contentStyle={{ backgroundColor: "white", border: "1px solid #ccc" }} />
+            <Tooltip 
+            cursor={{ 
+              fill: "transparent" }} 
+              contentStyle={{ 
+                backgroundColor: "white", 
+                border: "1px solid #ccc",
+                }} />
             <Bar
               dataKey="gained"
               barSize={15}

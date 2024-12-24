@@ -68,7 +68,11 @@ const SocialTraffic: React.FC = () => {
           Social Traffic Metrics
         </Typography>
 
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box 
+        sx={{ 
+          display: 'flex', 
+          alignItems:'center',
+           }}>
           <Button
             onClick={() => setTimeframe('week')}
             sx={{

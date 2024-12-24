@@ -39,9 +39,15 @@ export default function Flag() {
           <IconButton
             onClick={handleFlagOpen}
             disableRipple
-            sx={{ p: 0 }}
+            sx={{ p: 0, }}
           >
-            <Avatar alt="flag" src={selectedFlag} sx={{ width: 23, height: 23 }} />
+            <Avatar 
+            alt="flag" 
+            src={selectedFlag} 
+            sx={{ 
+              width: 23, 
+              height: 23,
+               }} />
           </IconButton>
         </Tooltip>
         <Menu

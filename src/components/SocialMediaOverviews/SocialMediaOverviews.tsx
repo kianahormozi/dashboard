@@ -30,7 +30,8 @@ const SocialMediaOverviews: React.FC = () => {
 
       <Divider 
       sx={{ 
-        margin: "0 20px 15px",  }} />
+        margin: "0 20px 15px",
+        }} />
 
       {/* Social Media Items */}
       <Box
@@ -72,11 +73,19 @@ const SocialMediaOverviews: React.FC = () => {
             {/* Text and Number */}
             <Box>
               <Typography
-                sx={{ fontWeight: "700", fontSize: "18px", color: "#272b41" }}
+                sx={{ 
+                  fontWeight: "700", 
+                  fontSize: "18px", 
+                  color: "#272b41",
+                 }}
               >
                 {item.iconnumber}
               </Typography>
-              <Typography sx={{ color: "#6b708b", fontSize: "14px" }}>
+              <Typography 
+              sx={{ 
+                color: "#6b708b", 
+                fontSize: "14px",
+                 }}>
                 {item.icontext}
               </Typography>
             </Box>

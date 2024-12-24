@@ -22,8 +22,8 @@ import { CartItem as CartItemType } from "../../store/cart-slice"; // اصلاح
 interface ProductViewProps {
   products: Product[]; // اضافه کردن ویژگی products
   isGridView: boolean;
-  toggleFavorite: (id: number) => void;
-  favoriteIds: number[];
+  toggleFavorite: (id: number) => void; // تابع مربوط به ایکون علاقه مندی
+  favoriteIds: number[]; // لیست ایدی محصولات مورد علاقه
 }
 
 const ProductView: React.FC<ProductViewProps> = ({
@@ -40,7 +40,7 @@ const ProductView: React.FC<ProductViewProps> = ({
     return price - (price * discountPercentage) / 100;
   };
 
-  // اصلاح تابع handleAddToCart
+  //  handleAddToCart
   const handleAddToCart = (product: Product) => {
     const cartItem: CartItemType = {
       id: product.id,

@@ -75,10 +75,11 @@ export default function Sidebar() {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ 
+      display: 'flex',
+       }}>
       {/* کامپوننت هدر */}
       <Header open={open} onDrawerToggle={handleDrawerToggle} />
-
       {/* کامپوننت Drawer */}
       <DrawerStyled variant="permanent" open={open}>
         <List 

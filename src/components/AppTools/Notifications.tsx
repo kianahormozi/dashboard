@@ -52,7 +52,7 @@ const handleBadgeVisibility = () => {
         color="inherit"
         sx={ { 
           padding: "0", 
-          backgroundColor: "transparent !important" 
+          backgroundColor: "transparent !important",
           }
         }
         onClick={handleOpenMenu}
@@ -63,7 +63,7 @@ const handleBadgeVisibility = () => {
               invisible={invisible}
               anchorOrigin={ { 
                 vertical: "top", 
-                horizontal: "right" 
+                horizontal: "right" ,
                 }
               }
               sx={{
@@ -74,7 +74,9 @@ const handleBadgeVisibility = () => {
               }}
             >
               <NotificationsOutlinedIcon 
-              sx={ { color:"#6b708b" } } />
+              sx={{ 
+                color:"#6b708b",
+                 } } />
             </Badge>
       </IconButton>
 
@@ -188,13 +190,17 @@ const handleBadgeVisibility = () => {
                   fontSize: "14px", 
                   fontWeight: "bold", 
                   color: "rgb(90, 95, 125)" , 
-                  paddingBottom:".4rem"
+                  paddingBottom:".4rem",
                   }
                 }
               >
                 {notification.message}
               </Typography>
-              <Typography sx={{ fontSize: "12px", color: "rgb(173, 180, 210)" }}>
+              <Typography 
+              sx={{ 
+                fontSize: "12px", 
+                color: "rgb(173, 180, 210)",
+                 }}>
                 {notification.time}
               </Typography>
               </Box>
@@ -216,8 +222,6 @@ const handleBadgeVisibility = () => {
           }}
           onClick={() => {
             handleCloseMenu();
-
-            console.log("Redirect to all notifications");
           }}
         >
           See all incoming activity

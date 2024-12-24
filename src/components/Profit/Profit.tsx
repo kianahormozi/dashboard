@@ -87,21 +87,30 @@ const Profit: React.FC = () => {
               <Typography
                 variant="body2"
                 color={item.color}
-                sx={{ marginLeft: 0.5 }}
+                sx={{ 
+                  marginLeft: 0.5,
+                 }}
               >
                 {item.change}
               </Typography>
               <Typography
                 variant="body2"
                 color="textSecondary"
-                sx={{ marginLeft: 1 }}
+                sx={{ 
+                  marginLeft: 1,
+                 }}
               >
                 {item.prev}
               </Typography>
             </Box>
 
             {/* چارت */}
-            <Box sx={{ height: "100px", width: "100%", marginTop: 2 }}>
+            <Box 
+            sx={{ 
+              height: "100px", 
+              width: "100%", 
+              marginTop: '16px',
+               }}>
               <Line
                 data={{
                   labels: item.datasets.map((_, i) => `Label ${i + 1}`),

@@ -16,16 +16,16 @@ interface MenuItemData {
   const StyledMenu = styled(Menu)(({ theme }) => ({
     "& .MuiPaper-root": {
       borderRadius: 6,
-      marginLeft: "-4rem",
-      marginTop: "5px",
-      minWidth: 180,
+      marginLeft: "-1rem",
+      marginTop: "0",
+      minWidth: 130,
       color: "rgb(55, 65, 81)",
       boxShadow:
         "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
       "& .MuiMenuItem-root": {
         "& .MuiSvgIcon-root": {
           fontSize: 18,
-          color: theme.palette.text.secondary,
+          color: 'rgb(55, 65, 81)',
           marginRight: theme.spacing(1.5),
         },
       },
@@ -138,7 +138,7 @@ const SimpleLineChart : React.FC = () => {
                     width={500}
                     height={250}
                     sx={{
-                        margin:".5rem"
+                        margin:".5rem",
                     }}
                     series={[
                         {

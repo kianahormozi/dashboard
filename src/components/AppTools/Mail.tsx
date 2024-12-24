@@ -69,7 +69,7 @@ const MessageMenu: React.FC = () => {
         color="inherit"
         sx={ { 
           padding: "0", 
-          backgroundColor: "transparent" 
+          backgroundColor: "transparent" ,
         } }
         onClick={handleMenuOpen}
       >
@@ -91,7 +91,7 @@ const MessageMenu: React.FC = () => {
             >
               <MailOutlineIcon 
               sx={ {
-                color:"#6b708b" 
+                color:"#6b708b",
               } }
 
                />
@@ -187,7 +187,7 @@ const MessageMenu: React.FC = () => {
                 display: "flex", 
                 flexDirection: "column", 
                 justifyContent: "space-between" , 
-                width:"280px"
+                width:"280px",
                 } }
                 >
                 {/* Sender and Message Count in one line */}
@@ -201,8 +201,8 @@ const MessageMenu: React.FC = () => {
                   >
                   <Typography variant="body1" 
                   sx={ { 
-                    fontSize:"14px" 
-                    } }
+                    fontSize:"14px",
+                    }}
                     >
                     {msg.sender}
                   </Typography>

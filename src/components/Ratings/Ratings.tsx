@@ -4,21 +4,18 @@ import { products } from "../ProductStore/ProductStoreData";
 
 const Ratings:React.FC = () => {
   const [selectedRatings, setSelectedRatings] = useState<number[]>([]);
-
   // محاسبه تعداد پست‌ها بر اساس ستاره
   const ratingsCount = products.reduce((acc: Record<number, number>, product) => {
     const roundedRating = Math.floor(product.rating); // گرد کردن ستاره به پایین
     acc[roundedRating] = (acc[roundedRating] || 0) + 1;
     return acc;
   }, {});
-
   // مدیریت تغییر ستاره‌های انتخاب‌شده
   const handleRatingChange = (rating: number) => {
     setSelectedRatings((prev) =>
       prev.includes(rating) ? prev.filter((r) => r !== rating) : [...prev, rating]
     );
   };
-
   return (
     <Box sx={{ padding: "20px 0" }}>
       <Typography

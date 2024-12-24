@@ -3,7 +3,6 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-
   rating: number;
   image: string;
   category: string;
@@ -71,7 +70,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 2320,
-
     rating: 4.9,
     image: "/image/product4.png",
     category: "Cups",
@@ -85,7 +83,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 1200,
-
     rating: 4.9,
     image: "/image/product5.png",
     category: "Cups",
@@ -99,7 +96,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 1280,
-
     rating: 4.9,
     image: "/image/product6.png",
     category: "Cups",
@@ -113,7 +109,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 1230,
-
     rating: 4.9,
     image: "/image/product7.png",
     category: "Cups",
@@ -127,7 +122,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 1120,
-
     rating: 4.9,
     image: "/image/product8.png",
     category: "Cups",
@@ -141,7 +135,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 920,
-  
     rating: 4.9,
     image: "/image/product9.png",
     category: "Cups",
@@ -155,7 +148,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 620,
-
     rating: 4.9,
     image: "/image/product10.png",
     category: "Cups",
@@ -169,7 +161,6 @@ export const products: Product[] = [
     name: "Commodo Adipiscing",
     description: "A practical and high-quality cup for everyday use.",
     price: 320,
-
     rating: 4.9,
     image: "/image/product11.png",
     category: "Cups",

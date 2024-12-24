@@ -1,6 +1,6 @@
-import React , { useState } from "react";
+import React from "react";
 import { Box , Typography , FormControlLabel , Checkbox , } from "@mui/material";
-import { Product , products} from "../ProductStore/ProductStoreData";
+import { Product } from "../ProductStore/ProductStoreData";
 
 interface FiltersProps {
     products: Product[];
